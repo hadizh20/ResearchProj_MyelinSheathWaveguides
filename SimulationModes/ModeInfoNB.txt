@@ -1,0 +1,123 @@
+Mode 1:
+
+effective index = 1.411200
+wavelength = 0.4 microns
+loss (dB/cm) = 0.0000
+group index N/A
+TE polarization fraction (Ex) = 92
+waveguide TE/TM fraction (%) = 99.07/98.86
+
+
+Mode 2:
+
+1.411200
+0.4 microns
+0.0000
+N/A
+7
+99.07/98.86
+
+
+Mode 3:
+
+1.409009
+0.4 microns
+0.0000
+N/A
+50
+100/97.49
+
+
+Mode 4:
+
+1.408197
+0.4 microns
+0.0000
+N/A
+50
+98.65/98.72
+
+
+Mode 5:
+
+1.408170
+0.4 microns
+0.0000
+N/A
+50
+98.65/98.72
+
+
+Mode 6:
+
+1.407093
+0.4 microns
+0.0000
+N/A
+50
+97.2/100
+
+
+Mode 7:
+
+1.400022
+0.4 microns
+0.0000
+N/A
+50 (51)
+97.95/98.18
+
+
+Mode 8:
+
+1.400022
+0.4 microns
+0.0000
+N/A
+49 (50?)
+97.95/98.18
+
+
+Mode 9:
+
+1.399849
+0.4 microns
+0.0000
+N/A
+52
+97.84/98.28
+
+
+Mode 10:
+
+1.399849
+0.4 microns
+0.0000
+N/A
+49
+97.84/98.28 
+
+
+Mode 11:
+
+1.387381
+0.4 microns
+0.0000
+N/A
+50
+97.17/97.29
+
+
+Mode 12: 
+
+1.387379
+0.4 microns
+0.0000
+N/A
+50
+97.17/97.28
+
+
+
+
+
