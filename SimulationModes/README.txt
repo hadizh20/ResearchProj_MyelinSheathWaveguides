@@ -4,4 +4,4 @@ This folder contains all simulation data recorded for the calculated modes of th
 
 "READ_SOURCE_DATA_final.txt" is the Lumerical script file to save all the data from the mode source is also included.
 
-"ModeInfo.txt" is a text file which includes all the data that was presented alongside calculation of the mode in the software, most notably this includes the effective index which is analogous to the eigenvalue of the mode. 
+"ModeInfo_NB.txt" is a text file which includes all the data that was presented alongside calculation of the mode in the software, most notably this includes the effective index which is analogous to the eigenvalue of the mode. 
