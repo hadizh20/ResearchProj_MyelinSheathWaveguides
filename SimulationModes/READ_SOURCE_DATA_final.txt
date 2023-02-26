@@ -3,7 +3,7 @@
 
 #The file name below was changed to save the data from each of the modes.
 monitorName = "source";
-fileName = "sourceData/mode1/data_sourceM1";
+fileName = "sourceData/mode1/data_sourceM1(nonbirefringent)";
 
 #get main sets of results from MODE source
 TE_polarization_fraction = getresult(monitorName, "TE polarization fraction");
