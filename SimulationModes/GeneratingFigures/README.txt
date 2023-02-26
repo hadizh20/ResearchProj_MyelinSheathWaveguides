@@ -1,1 +1,1 @@
-This folder contains MATLAB code used to generate the magnitude plot and vector plot for each of the modes. Note that the code used to generate the magnitude plot uses the magnitude data also provided here, named after each mode. Magnitude data saved from the software, magnitude plot code primarily provided by software.
+This folder contains MATLAB code used to generate the magnitude plot and vector plot for each of the modes.
