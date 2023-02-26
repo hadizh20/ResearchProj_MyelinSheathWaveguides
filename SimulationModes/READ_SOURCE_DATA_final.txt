@@ -1,0 +1,98 @@
+#Official code for reading all the necessary data
+# from the source.
+
+#The file name below was changed to save the data from each of the modes.
+monitorName = "source";
+fileName = "sourceData/mode1/data_sourceM1";
+
+#get main sets of results from MODE source
+TE_polarization_fraction = getresult(monitorName, "TE polarization fraction");
+loss = getresult(monitorName, "loss");
+mode_profile = getresult(monitorName, "mode profile");
+neff = getresult(monitorName, "neff");
+spectrum = getresult(monitorName, "spectrum");
+time_signal = getresult(monitorName, "time signal");
+
+
+#get all other data from source
+
+x=getdata(monitorName,"x"); 
+y=getdata(monitorName,"y"); 
+z=getdata(monitorName,"z");
+
+dimension = getdata(monitorName, "dimension");
+P0 = getdata(monitorName, "P0");
+f = getdata(monitorName, "f");
+delta_f = getdata(monitorName, "delta_f");
+dt = getdata(monitorName, "dt");
+start_frequency = getdata(monitorName, "start_frequency");
+stop_frequency = getdata(monitorName, "stop_frequency");
+broad_band = getdata(monitorName, "broad_band");
+delta_t = getdata(monitorName, "delta_t");
+t0 = getdata(monitorName, "t0");
+time = getdata(monitorName, "time");
+time_signal = getdata(monitorName, "time_signal");
+phase = getdata(monitorName, "phase");
+user_defined_phase = getdata(monitorName, "user_defined_phase");
+yee_phase_factor = getdata(monitorName, "yee_phase_factor");
+area = getdata(monitorName, "area");
+
+ExAmp = getdata(monitorName,"ExAmp");  
+ExPhs = getdata(monitorName, "ExPhs");
+EyAmp = getdata(monitorName,"EyAmp"); 
+EyPhs = getdata(monitorName, "EyPhs");
+EzAmp = getdata(monitorName,"EzAmp");
+EzPhs = getdata(monitorName, "EzPhs");
+
+HxAmp = getdata(monitorName, "HxAmp");
+HxPhs = getdata(monitorName, "HxPhs");
+HyAmp = getdata(monitorName, "HyAmp");
+HyPhs = getdata(monitorName, "HyPhs");
+HzAmp = getdata(monitorName, "HzAmp");
+HzPhs = getdata(monitorName, "HzPhs");
+delta_x = getdata(monitorName, "delta_x"); 
+delta_y = getdata(monitorName, "delta_y");
+delta_z = getdata(monitorName, "delta_z");
+index_x = getdata(monitorName, "index_x");
+index_y = getdata(monitorName, "index_y");
+index_z = getdata(monitorName, "index_z");
+
+#saves all main results
+matlabsave(fileName + "_mainSets.mat", TE_polarization_fraction, loss, mode_profile, neff, spectrum, time_signal);
+
+
+#saves all other data 
+matlabsave(fileName + "_general.mat", x, y, z, dimension, P0, f, delta_f, dt, start_frequency, stop_frequency, broad_band, delta_t, t0, time, time_signal, phase, user_defined_phase, yee_phase_factor, area, ExAmp, ExPhs, EyAmp, EyPhs, EzAmp, EzPhs, HxAmp, HxPhs, HyAmp, HyPhs, HzAmp, HzPhs, delta_x, delta_y, delta_z, index_x, index_y, index_z);
+
+
+Ex = mode_profile.Ex;
+Ey = mode_profile.Ey;
+Ez = mode_profile.Ez;
+
+## Choose a frequency point ( the first one ) 
+Ex=pinch(Ex,4,1); Ey=pinch(Ey,4,1); Ez=pinch(Ez,4,1);
+
+
+
+
+##FULL RESOLUTION
+
+## Specify the resolution of the plot  
+res_x=142; 
+res_y=142; 
+res_z=1; 
+## Define uniform vectors 
+x2=linspace(x(1),x(length(x)),res_x); 
+y2=linspace(y(1),y(length(y)),res_y); 
+z2=linspace(z(1),z(length(z)),res_z);  
+xmesh = meshgrid3dx(x2,y2,z2); 
+ymesh = meshgrid3dy(x2,y2,z2); 
+zmesh = meshgrid3dz(x2,y2,z2); 
+## Interpolate fields on new uniform vectors
+Ex=interp(Ex, x, y, z, x2, y2, z2); 
+Ey=interp(Ey, x, y, z, x2, y2, z2); 
+Ez=interp(Ez, x, y, z, x2, y2, z2); 
+
+
+#matlabsave(fileName + "_Efield.mat",Ex,Ey,Ez,xmesh,ymesh,zmesh,x,y,z,x2,y2,z2);
+
