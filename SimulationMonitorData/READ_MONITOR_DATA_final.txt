@@ -79,8 +79,8 @@ Ex=pinch(Ex,4,1); Ey=pinch(Ey,4,1); Ez=pinch(Ez,4,1);
 #FULL RESOLUTION
 
 #Specify desired resolution of the plot
-res_x=142; #142 for birefringent, 141 for non-birefringent 
-res_y=142; 
+res_x=141; #142 for birefringent, 141 for non-birefringent 
+res_y=141; 
 res_z=1; 
 # Define uniform vectors 
 x2=linspace(x(1),x(length(x)),res_x); 
