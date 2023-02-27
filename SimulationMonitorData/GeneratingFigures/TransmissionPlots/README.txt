@@ -1,1 +1,1 @@
-This folder contains the transmission plots generated using the monitor data.
+This folder contains the transmission plot generated using the monitor data.
