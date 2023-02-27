@@ -1,1 +1,1 @@
-This folder contains the MATLAB code written to generate the matrix transform which was input into the Lumerical software, used to specify that the birefringence of the myelin is radial birefringence. 
+This folder contains the MATLAB code written to generate the matrix transform which was input into the Lumerical software, used to specify that the birefringence of the myelin is radial birefringence. -- IN PROGRESS!! 
