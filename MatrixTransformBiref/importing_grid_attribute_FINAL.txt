@@ -1,0 +1,19 @@
+
+#loads the matrix transform file
+#ensure that this file reference is correct
+matlabload("custom_transform_for_myelin_model_FINAL\UData_myelinRad1_res801.mat"); 
+
+
+#defines the grid in the simulation region where the matrix transform should be applied
+#the third argument in each of these three lines should remain the same
+x = linspace(-1e-6, 1e-6, size(U,1)); #if sideLength is changed in generate_custom_transform.mat, change first two arguments accordingly
+y = linspace(-1e-6, 1e-6, size(U,2)); #if sideLength is changed in generate_custom_transform.mat, change first two arguments accordingly
+z = linspace(0, 500e-6, 2); #first two arguments are not as crucial here, if you set these to 0 and 10e-6 for instance the matrix transform is still applied even out to 500e-6
+
+
+
+# add grid attribute 
+MT=rectilineardataset("MT",x,y,z);
+MT.addattribute("U",U);
+addgridattribute("matrix transform",MT);
+set("name","Matrix transform");
